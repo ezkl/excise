@@ -1,7 +1,7 @@
 # Excise
 A Ruby port of @laktek's [extract-values](https://github.com/laktek/extract-values).
 
->> This is a simple helper to extract values from a string based on a pattern.
+> This is a simple helper to extract values from a string based on a pattern.
 
 ## Installation
 
