@@ -5,19 +5,20 @@ module Excise
     TOKEN_EXPRESSION = /{([^{}\t\r\n]+)}/.freeze
     SPECIAL_CHARACTERS_EXPRESSION = /[\\\^\$\*\+\.\?\(\)\[\]]/.freeze
 
-    attr_accessor :string
-
     def initialize(pattern)
       @pattern = pattern
-      @output = {}
     end
 
     def parse(string)
       @matches = pattern_expression.match(string)
+
+      output = {}
+
       tokens.each_with_index do |key, index|
-        @output[key.to_sym] = @matches[index+1]
+        output[key.to_sym] = @matches[index+1]
       end
-      @output
+
+      output
     end
 
     def tokens
