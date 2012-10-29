@@ -29,8 +29,8 @@ Excise('About {result_count} results ({load_time} seconds)',
 
 # Memoize pattern for performance improvement
 pattern = Excise::Base.new('[{key}]')
-pattern.parse_string '[value]' #=> {:key=>"value"}
-pattern.parse_string '[other]' #=> {:key=>"other"}
+pattern.parse '[value]' #=> {:key=>"value"}
+pattern.parse '[other]' #=> {:key=>"other"}
 ```
 
 ## Contributing
