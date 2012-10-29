@@ -10,15 +10,13 @@ module Excise
     def initialize(pattern, string = "")
       @pattern = pattern
       @string = string
-      @tokens = tokens
-      @pattern_expression = pattern_expression
 
       @output = {}
     end
 
     def parse
-      @matches = @pattern_expression.match(@string)
-      @tokens.each_with_index do |key, index|
+      @matches = pattern_expression.match(@string)
+      tokens.each_with_index do |key, index|
         @output[key.to_sym] = @matches[index+1]
       end
       @output
