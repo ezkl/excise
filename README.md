@@ -1,4 +1,4 @@
-# Excise [![Build Status](https://secure.travis-ci.org/ezkl/excise.png)](http://travis-ci.org/ezkl/excise)
+# Excise [![Build Status](https://secure.travis-ci.org/ezkl/excise.png)](http://travis-ci.org/ezkl/excise) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/ezkl/excise)
 > This is a simple helper to extract values from a string based on a pattern.
 
 A Ruby port of [laktek's](https://github.com/laktek/) [extract-values](https://github.com/laktek/extract-values).
