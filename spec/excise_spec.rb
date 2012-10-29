@@ -9,4 +9,12 @@ describe Excise do
 
     it { should be_a Hash }
   end
+
+  describe "Excise convenience method" do
+    subject { Excise(string, pattern) }
+    let(:string)  { '[first]' }
+    let(:pattern) { '[{first}]' }
+
+    it { should be_a Hash }
+  end
 end

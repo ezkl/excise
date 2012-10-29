@@ -7,3 +7,7 @@ module Excise
     Base.new(string, pattern).parse
   end
 end
+
+def Excise(string, pattern)
+  Excise.parse(string, pattern)
+end
