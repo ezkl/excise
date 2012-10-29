@@ -2,18 +2,18 @@ require "spec_helper"
 
 describe Excise do
   describe ".parse" do
-    subject { Excise.parse(string, pattern) }
+    subject { Excise.parse(pattern, string) }
 
-    let(:string)  { '[this] (patterned) <STRING>' }
     let(:pattern) { '[{first}] ({second}) <{third}>' }
+    let(:string)  { '[this] (patterned) <STRING>' }
 
     it { should be_a Hash }
   end
 
   describe "Excise convenience method" do
-    subject { Excise(string, pattern) }
-    let(:string)  { '[first]' }
+    subject { Excise(pattern, string) }
     let(:pattern) { '[{first}]' }
+    let(:string)  { '[first]' }
 
     it { should be_a Hash }
   end
