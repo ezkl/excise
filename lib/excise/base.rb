@@ -7,24 +7,17 @@ module Excise
 
     attr_accessor :string
 
-    def initialize(pattern, string = "")
+    def initialize(pattern)
       @pattern = pattern
-      @string = string
-
       @output = {}
     end
 
-    def parse
-      @matches = pattern_expression.match(@string)
+    def parse(string)
+      @matches = pattern_expression.match(string)
       tokens.each_with_index do |key, index|
         @output[key.to_sym] = @matches[index+1]
       end
       @output
-    end
-
-    def parse_string(string)
-      @string = string
-      parse
     end
 
     def tokens

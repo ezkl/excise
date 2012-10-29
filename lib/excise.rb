@@ -3,11 +3,11 @@ require "excise/version"
 require "excise/base"
 
 module Excise
-  def self.parse(string, pattern)
-    Base.new(string, pattern).parse
+  def self.parse(pattern, string)
+    Base.new(pattern).parse(string)
   end
 end
 
-def Excise(string, pattern)
-  Excise.parse(string, pattern)
+def Excise(pattern, string)
+  Excise.parse(pattern, string)
 end
