@@ -23,14 +23,13 @@ Or install it yourself as:
 require 'excise'
 
 # Basic use
-Excise('About {result_count} results ({load_time} seconds)',
-       'About 49,000,000 results (0.15 seconds)')
-#=> {:result_count=>"49,000,000", :load_time=>"0.15"}
+pattern_text = 'About {result_count} results'
+Excise(pattern_text, 'About 49,000 results') #=> {:result_count=>"49,000"}
 
 # Memoize pattern for performance improvement
-pattern = Excise.new('[{key}]')
-pattern.parse '[value]' #=> {:key=>"value"}
-pattern.parse '[other]' #=> {:key=>"other"}
+pattern = Excise.new(pattern_text)
+pattern.parse 'About 49,000,000 results' #=> {:result_count=>"49,000,000"}
+pattern.parse 'About 1,000 results' #=> {:result_count=>"1,000"}
 ```
 
 ## Contributing
