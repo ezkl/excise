@@ -9,8 +9,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Ezekiel Templin"]
   gem.email         = ["zeke@templ.in"]
   gem.description   = %q{Excise is a Ruby port of extract-values}
-  gem.summary       = %q{Excise is a Ruby port of extract-values}
-  gem.homepage      = ""
+  gem.summary       = %q{From extract-values description: "... a simple helper to extract values from a string based on a pattern."}
+  gem.homepage      = "http://zeke.templ.in/excise"
 
   gem.files         = `git ls-files`.split($/)
   gem.test_files    = gem.files.grep('spec')
