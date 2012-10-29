@@ -22,9 +22,8 @@ Or install it yourself as:
 ```ruby
 require 'excise'
 
-Excise.parse('About 49,000,000 results (0.15 seconds)',
-             'About {result_count} results ({load_time} seconds)')
-
+Excise('About 49,000,000 results (0.15 seconds)',
+       'About {result_count} results ({load_time} seconds)')
 #=> {:result_count=>"49,000,000", :load_time=>"0.15"}
 ```
 
