@@ -22,9 +22,15 @@ Or install it yourself as:
 ```ruby
 require 'excise'
 
-Excise('About 49,000,000 results (0.15 seconds)',
-       'About {result_count} results ({load_time} seconds)')
+# Basic use
+Excise('About {result_count} results ({load_time} seconds)',
+       'About 49,000,000 results (0.15 seconds)')
 #=> {:result_count=>"49,000,000", :load_time=>"0.15"}
+
+# Memoize pattern for performance improvement
+pattern = Excise::Base.new('[{key}]')
+pattern.parse_string '[value]' #=> {:key=>"value"}
+pattern.parse_string '[other]' #=> {:key=>"other"}
 ```
 
 ## Contributing
