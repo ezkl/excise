@@ -67,9 +67,9 @@
 <span class="c1">#=&gt; {:result_count=&gt;"49,000,000", :load_time=&gt;"0.15"}</span>
 
 <span class="c1"># Memoize pattern for performance improvement</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="no">Excise</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'[{key}]'</span><span class="p">)</span>
-<span class="n">pattern</span><span class="o">.</span><span class="n">parse_string</span> <span class="s1">'[value]'</span> <span class="c1">#=&gt; {:key=&gt;"value"}</span>
-<span class="n">pattern</span><span class="o">.</span><span class="n">parse_string</span> <span class="s1">'[other]'</span> <span class="c1">#=&gt; {:key=&gt;"other"}</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="no">Excise</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">'[{key}]'</span><span class="p">)</span>
+<span class="n">pattern</span><span class="o">.</span><span class="n">parse</span> <span class="s1">'[value]'</span> <span class="c1">#=&gt; {:key=&gt;"value"}</span>
+<span class="n">pattern</span><span class="o">.</span><span class="n">parse</span> <span class="s1">'[other]'</span> <span class="c1">#=&gt; {:key=&gt;"other"}</span>
 </pre></div>
 
 <h2>Contributing</h2>
