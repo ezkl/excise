@@ -1,6 +1,7 @@
 # Excise
+A Ruby port of @laktek's [extract-values](https://github.com/laktek/extract-values).
 
-TODO: Write a gem description
+>> This is a simple helper to extract values from a string based on a pattern.
 
 ## Installation
 
@@ -18,7 +19,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'excise'
+
+Excise.parse('About 49,000,000 results (0.15 seconds)',
+             'About {result_count} results ({load_time} seconds)')
+
+#=> {:result_count=>"49,000,000", :load_time=>"0.15"}
+```
 
 ## Contributing
 

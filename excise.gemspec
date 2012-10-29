@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Excise::VERSION
   gem.authors       = ["Ezekiel Templin"]
   gem.email         = ["zeke@templ.in"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Excise is a Ruby port of extract-values}
+  gem.summary       = %q{Excise is a Ruby port of extract-values}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
