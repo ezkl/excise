@@ -28,7 +28,7 @@ Excise('About {result_count} results ({load_time} seconds)',
 #=> {:result_count=>"49,000,000", :load_time=>"0.15"}
 
 # Memoize pattern for performance improvement
-pattern = Excise::Base.new('[{key}]')
+pattern = Excise.new('[{key}]')
 pattern.parse '[value]' #=> {:key=>"value"}
 pattern.parse '[other]' #=> {:key=>"other"}
 ```

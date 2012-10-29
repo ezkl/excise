@@ -1,10 +1,17 @@
 # encoding: utf-8
 require "excise/version"
 require "excise/base"
+require "forwardable"
 
 module Excise
+  class << self
+    extend Forwardable
+
+    def_delegator 'Excise::Base', :new
+  end
+
   def self.parse(pattern, string)
-    Base.new(pattern).parse(string)
+    new(pattern).parse(string)
   end
 end
 

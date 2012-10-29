@@ -1,6 +1,11 @@
 require "spec_helper"
 
 describe Excise do
+  describe ".new" do
+    subject { Excise.new('{key}') }
+    it { should be_a Excise::Base }
+  end
+
   describe ".parse" do
     subject { Excise.parse(pattern, string) }
 
